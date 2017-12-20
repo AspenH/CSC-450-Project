@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Project Slate - Group 2</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+        <script type="text/javascript" src="static/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="static/js/knockout-3.4.2.js"></script>
+        <script type="text/javascript" src="static/js/index.js"></script>
+        <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="static/css/index.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Project FandRec</h1>
+            <h2>Facial and Hand Recogition</h2>
+            <div id="registration" style="display: none;">
+                <a href="detect.html">Detection</a>
+                <div class="well well-lg">
+                    <img data-bind="attr: { src: image }" />
+                </div>
+                <label>Username: <textarea id="username" style="color:black; height: 20px;"></textarea></label>
+                <br/>
+                <button onclick="username = document.getElementById('username').value; webSocket.send('doregister|'+username);">Register Face</button>
+                <br/>
+                <hr>
+                <br/>
+                <select id="users">
+                </select>
+                <select id="fingers">
+                </select>
+                <select id="states">
+                </select>
+                <button onclick="sendAssignInfo()">Assign</button>
+            </div>
+            <div id="connection">
+                <form id="POST">
+                    <div class="form-group">
+                        <label for="text">Acu-id: </label>
+                        <input type="text" class="form-control" id="text" value="lab_cam">
+                    </div>
+                    <div class="form-group">
+                        <label for="text">Hub-id:</label>
+                        <input type="text" class="form-control" id="text" value="testHub">
+                    </div>
+                    <div class="form-group">
+                        <label for="text">Network-id:</label>
+                        <input type="text" class="form-control" id="text" value="testNetwork">
+                    </div>
+                    <div class="form-group">
+                        <label for="text">User-id:</label>
+                        <input type="text" class="form-control" id="text" value="testUser">
+                    </div>
+                    <div class="form-group">
+                        <label for="text">User-pas:</label>
+                        <input type="text" class="form-control" id="text" value="testtest">
+                    </div>
+                    <div class="form-group">
+                        <label for="text">Hub-access-key</label>
+                        <input type="text" class="form-control" id="text" value="csc450">
+                    </div>
+                    <br>
+                </form>
+                <button type="submit" class="button" onclick="sendCompesInfo(); setTimeout(function(){window.location.reload(true)}, 1500);">SUBMIT</button>
+            </div>
+        </div>
+    </body>
+</html>
+

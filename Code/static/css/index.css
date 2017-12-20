@@ -1,0 +1,54 @@
+/* Stylesheet for form page */
+
+body {
+    background-image: url("original.gif");
+}
+h1 {
+     font-family:  Ostrich Sans;
+     word-spacing: 10px;
+     letter-spacing: 30px;
+     font-size: 100px; 
+     text-align: left; 
+     color: gainsboro;
+     
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: gainsboro;
+    opacity: 50%;
+}
+
+label {
+    font-family: 'Orbitron', sans-serif;
+    color: whitesmoke; 
+    opacity: 60%;
+    font-size: 15px;
+}
+
+.btn-default {
+    font-family: 'Orbitron', sans-serif !important; 
+    color: white !important;
+}
+
+.button {
+    font-size: 15px;
+    font-family: 'Orbitron', sans-serif;
+    color: black;
+    background-color: whitesmoke;
+    padding: 10px;
+
+    
+}
+
+.button:hover {
+    color: black; 
+    background-color: whitesmoke;
+}
+
+.well {
+    width: 700px;
+    height: 540px;
+    margin-left: auto;
+    margin-right: auto;
+}
